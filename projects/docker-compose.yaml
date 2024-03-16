@@ -1,0 +1,17 @@
+version: "2.24.6"
+services:
+    backend:
+       build: ./backend
+       container_name: backend_c1
+       ports: 
+         - '3002:3002'
+       volumes:
+         - ./backend:/app
+    frontend:
+        build: ./frontend
+        container_name: frontend_c1
+        ports: 
+          - '3001:3001'
+        tty: true
+       
+
